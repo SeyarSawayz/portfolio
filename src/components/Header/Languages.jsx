@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai";
-import list from "./list.json";
 import useTheme from "../../context/theme";
 
 const Languages = () => {
