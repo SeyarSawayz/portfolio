@@ -154,7 +154,7 @@ const Header = ({ activeNav, setActiveNav }) => {
                   }.png`}
                   alt=""
                 />
-                <li className="font-semibold mt-1">Work</li>
+                <li className="font-semibold mt-1">Projects</li>
               </LinkScroll>
               <LinkScroll
                 to="contact"
