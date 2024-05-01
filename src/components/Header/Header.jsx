@@ -3,6 +3,7 @@ import { menu } from "../../constants";
 import { Link as LinkScroll } from "react-scroll";
 import ThemeBtn from "../themeBtn/ThemeBtn";
 import useTheme from "../../context/theme";
+import Languages from "./Languages";
 
 const Header = ({ activeNav, setActiveNav }) => {
   const { themeMode, lightTheme, darkTheme } = useTheme();
@@ -10,8 +11,13 @@ const Header = ({ activeNav, setActiveNav }) => {
   const [toggle, setToggle] = useState(false);
   return (
     <div className={`md:sticky top-0  bg-white dark:bg-[#1F2A40] z-50 `}>
-      <div className="md:hidden  flex items-center justify-end mt-4 mr-8">
-        <ThemeBtn />
+      <div className="md:hidden  flex items-center justify-between mt-4 mr-8">
+        <div className="ml-10">
+          <Languages />
+        </div>
+        <div>
+          <ThemeBtn />
+        </div>
       </div>
       <nav className="p-4 px-36  md:flex hidden  md:items-center md:justify-between  ">
         <div className="flex items-center justify-center">
@@ -60,8 +66,13 @@ const Header = ({ activeNav, setActiveNav }) => {
             </LinkScroll>
           ))}
         </ul>
-        <div>
-          <ThemeBtn />
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <Languages />
+          </div>
+          <div>
+            <ThemeBtn />
+          </div>
         </div>
       </nav>
       {/* Mobile Navbar */}
