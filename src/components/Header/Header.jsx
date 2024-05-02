@@ -1,25 +1,32 @@
 import React, { useState } from "react";
-import { menu } from "../../constants";
+import { getMenu } from "../../constants";
 import { Link as LinkScroll } from "react-scroll";
 import ThemeBtn from "../themeBtn/ThemeBtn";
 import useTheme from "../../context/theme";
 import Languages from "./Languages";
+import { useTranslationContext } from "../../context/TranslationProvider";
 
 const Header = ({ activeNav, setActiveNav }) => {
+  const menu = getMenu();
+  const { t, farsi } = useTranslationContext();
+
   const { themeMode, lightTheme, darkTheme } = useTheme();
 
   const [toggle, setToggle] = useState(false);
   return (
-    <div className={`md:sticky top-0  bg-white dark:bg-[#1F2A40] z-50 `}>
+    <div
+      className={`md:sticky top-0  bg-white dark:bg-[#1F2A40] z-50 `}
+      dir={`${farsi ? "rtl" : "ltr"}`}
+    >
       <div className="md:hidden  flex items-center justify-between mt-4 mr-8">
         <div className="ml-10">
           <Languages />
         </div>
-        <div>
+        <div className={`${farsi ? "ml-10" : "ml-0"}`}>
           <ThemeBtn />
         </div>
       </div>
-      <nav className="p-4 px-36  md:flex hidden  md:items-center md:justify-between  ">
+      <nav className="p-4 px-36  md:flex hidden  md:items-center md:justify-between   ">
         <div className="flex items-center justify-center">
           <LinkScroll
             to="home"
@@ -41,8 +48,8 @@ const Header = ({ activeNav, setActiveNav }) => {
               className="size-8"
             />
 
-            <h1 className="font-bold text-gray-800 dark:text-[#e0e0e0] text-[26px]">
-              SEYAR
+            <h1 className="font-bold text-gray-800 dark:text-[#e0e0e0] text-[26px] font-Amiri">
+              {t("SEYAR")}
             </h1>
           </LinkScroll>
         </div>
@@ -58,7 +65,7 @@ const Header = ({ activeNav, setActiveNav }) => {
                 activeNav === menuItem.id
                   ? "border-b-2 border-zinc-600 dark:border-white transition-all ease-in duration-200"
                   : ""
-              }`}
+              } ${farsi ? "font-Amiri" : ""}`}
               key={index}
               to={menuItem.id}
             >
@@ -95,7 +102,9 @@ const Header = ({ activeNav, setActiveNav }) => {
                   }.png`}
                   alt=""
                 />
-                <li className="font-semibold mt-1 dark:text-[#e0e0e0]">Home</li>
+                <li className="font-semibold mt-1 dark:text-[#e0e0e0]">
+                  {t("HOME")}
+                </li>
               </LinkScroll>
               <LinkScroll
                 to="about"
@@ -112,7 +121,7 @@ const Header = ({ activeNav, setActiveNav }) => {
                   }.png`}
                   alt=""
                 />
-                <li className="font-semibold mt-1">About</li>
+                <li className="font-semibold mt-1">{t("ABOUT ME")}</li>
               </LinkScroll>
               <LinkScroll
                 to="skills"
@@ -129,10 +138,14 @@ const Header = ({ activeNav, setActiveNav }) => {
                   }.png`}
                   alt=""
                 />
-                <li className="font-semibold mt-1">Skills</li>
+                <li className="font-semibold mt-1">{t("SKILLS")}</li>
               </LinkScroll>
             </ul>
-            <ul className="flex items-center justify-center gap-20 h-[120px] dark:bg-inherit bg-white">
+            <ul
+              className={`flex items-center justify-center ${
+                farsi ? "gap-24" : "gap-20"
+              } h-[120px] dark:bg-inherit bg-white`}
+            >
               <LinkScroll
                 to="services"
                 className="flex flex-col items-center cursor-pointer dark:text-[#e0e0e0]"
@@ -148,7 +161,7 @@ const Header = ({ activeNav, setActiveNav }) => {
                   }.png`}
                   alt=""
                 />
-                <li className="font-semibold mt-1">Services</li>
+                <li className="font-semibold mt-1">{t("SERVICES")}</li>
               </LinkScroll>
               <LinkScroll
                 to="work"
@@ -165,7 +178,7 @@ const Header = ({ activeNav, setActiveNav }) => {
                   }.png`}
                   alt=""
                 />
-                <li className="font-semibold mt-1">Projects</li>
+                <li className="font-semibold mt-1">{t("PROJECTS")}</li>
               </LinkScroll>
               <LinkScroll
                 to="contact"
@@ -182,7 +195,7 @@ const Header = ({ activeNav, setActiveNav }) => {
                   }.png`}
                   alt=""
                 />
-                <li className="font-semibold mt-1">Contact</li>
+                <li className="font-semibold mt-1">{t("CONTACT")}</li>
               </LinkScroll>
             </ul>
           </div>

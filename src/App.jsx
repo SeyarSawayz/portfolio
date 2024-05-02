@@ -11,6 +11,7 @@ import ContactMe from "./components/contact/ContactMe";
 import Footer from "./components/footer/Footer";
 import { useState } from "react";
 import { ThemeProvider } from "./context/theme";
+import { TranslationProvider } from "./context/TranslationProvider";
 
 const App = () => {
   const [dark, setDark] = useState(true);
@@ -31,26 +32,28 @@ const App = () => {
   }, [themeMode]);
 
   return (
-    <ThemeProvider value={{ themeMode, darkTheme, lightTheme }}>
-      <Header
-        dark={dark}
-        setDark={setDark}
-        activeNav={activeNav}
-        setActiveNav={setActiveNav}
-      />
-      <div className="relative container mx-auto md:px-48 px-4 py-10 ">
-        <main>
-          <Home activeNav={activeNav} setActiveNav={setActiveNav} />
-          <About />
-          <Skills />
-          <Services />
-          <Work />
-          <ContactMe />
-        </main>
-      </div>
-      <Footer />
-      <ToastContainer position="bottom-center" />
-    </ThemeProvider>
+    <TranslationProvider>
+      <ThemeProvider value={{ themeMode, darkTheme, lightTheme }}>
+        <Header
+          dark={dark}
+          setDark={setDark}
+          activeNav={activeNav}
+          setActiveNav={setActiveNav}
+        />
+        <div className="relative container mx-auto md:px-48 px-4 py-10 ">
+          <main>
+            <Home activeNav={activeNav} setActiveNav={setActiveNav} />
+            <About />
+            <Skills />
+            <Services />
+            <Work />
+            <ContactMe />
+          </main>
+        </div>
+        <Footer />
+        <ToastContainer position="bottom-center" />
+      </ThemeProvider>
+    </TranslationProvider>
   );
 };
 

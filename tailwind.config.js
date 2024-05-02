@@ -5,6 +5,8 @@ export default {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        Amiri: ["Amiri", "serif"],
+        Vazirmatn: ["Vazirmatn", "sans-serif"],
       },
     },
   },

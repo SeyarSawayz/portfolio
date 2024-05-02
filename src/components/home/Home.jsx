@@ -3,13 +3,21 @@ import Social from "./Social";
 import Data from "./Data";
 import { Link as LinkScroll } from "react-scroll";
 import useTheme from "../../context/theme";
-
+import { useTranslationContext } from "../../context/TranslationProvider";
 const Home = ({ activeNav, setActiveNav }) => {
   const { themeMode, lightTheme, darkTheme } = useTheme();
+  const { t, i18n, currentLanguage, farsi } = useTranslationContext();
 
   return (
-    <section id="home" className="w-full dark:bg-[#1F2A40]">
-      <div className="grid md:grid-cols-12 grid-cols-12 items-center w-full  gap-4">
+    <section
+      id="home"
+      className={`w-full dark:bg-[#1F2A40] `}
+      dir={`${farsi ? "rtl" : "ltr"}`}
+    >
+      <div
+        className={`grid md:grid-cols-12 grid-cols-12 items-center w-full  gap-4 
+        }`}
+      >
         <div className="social md:py-20 py-10 ml-0 md:col-span-2  col-span-2">
           <Social />
         </div>
@@ -33,8 +41,12 @@ const Home = ({ activeNav, setActiveNav }) => {
             className=""
             alt=""
           />
-          <h1 className="font-bold text-gray-600 mx-2 dark:text-[#e0e0e0]">
-            Scroll Down
+          <h1
+            className={`font-bold text-gray-600 mx-2 dark:text-[#e0e0e0] ${
+              farsi ? "font-Amiri text-xl mx-3" : ""
+            }`}
+          >
+            {t("Scroll_Down")}
           </h1>
           <img
             src={`/icons/${themeMode === "dark" ? "downWhite" : "down"}.png`}
