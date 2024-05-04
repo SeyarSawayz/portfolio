@@ -50,7 +50,7 @@ const Data = () => {
         duration={100}
       >
         <button
-          className={`}bg-zinc-900 hover:bg-zinc-800 text-xl mt-10 text-white px-8 py-4 rounded-2xl font-bold dark:bg-[#535AC8] hover:dark:bg-[#3F72AF] dark:text-[#e0e0e0] ${
+          className={`bg-zinc-900 hover:bg-zinc-800 text-xl mt-10 text-white px-8 py-4 rounded-2xl font-bold dark:bg-[#535AC8] hover:dark:bg-[#3F72AF] dark:text-[#e0e0e0] ${
             farsi ? "font-Amiri" : ""
           }`}
         >
