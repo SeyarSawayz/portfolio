@@ -4,6 +4,7 @@ import Data from "./Data";
 import { Link as LinkScroll } from "react-scroll";
 import useTheme from "../../context/theme";
 import { useTranslationContext } from "../../context/TranslationProvider";
+
 const Home = ({ activeNav, setActiveNav }) => {
   const { themeMode, lightTheme, darkTheme } = useTheme();
   const { t, i18n, currentLanguage, farsi } = useTranslationContext();

@@ -2,8 +2,11 @@ import { useState } from "react";
 import WorkCardLeft from "./WorkCardLeft";
 import WorkCardRight from "./WorkCardRight";
 import useTheme from "../../context/theme";
+import { useTranslationContext } from "../../context/TranslationProvider";
 
 const Work = () => {
+  const { t, i18n, currentLanguage, farsi } = useTranslationContext();
+
   const { themeMode, lightTheme, darkTheme } = useTheme();
 
   const [more, setMore] = useState(false);
@@ -14,19 +17,26 @@ const Work = () => {
       <section
         className="flex flex-col items-center justify-between w-full gap-1 mt-[170px] slide-top"
         id="work"
+        dir={`${farsi ? "rtl" : "ltr"}`}
       >
-        <h1 className="font-bold text-[30px] text-zinc-800 dark:text-[#e0e0e0]">
-          PROJECTS
+        <h1
+          className={`font-bold text-[30px] text-zinc-800 dark:text-[#e0e0e0] ${
+            farsi ? "font-Amiri md:text-3xl" : ""
+          }`}
+        >
+          {t("PROJECTS")}
         </h1>
-        <p className="text-gray-500 font-semibold dark:text-[#70d8bd]">
-          A Selection Of Stuff I've Built
+        <p
+          className={`"text-gray-500 font-semibold dark:text-[#70d8bd] ${
+            farsi ? "font-Amiri" : ""
+          }`}
+        >
+          {t("A Selection Of Stuff I've Built")}
         </p>
         <div className="w-full min-h-[400px] border dark:border-slate-600 border-gray-400 rounded-3xl  p-4 flex flex-col items-center  mt-4 shadow-2xl gap-3 overflow-hidden">
           <WorkCardRight
-            title={"TechForge Dashboard"}
-            content={
-              "A responsive dashboard, built with Material-UI (MUI), featuring both dark and light modes. Utilizes libraries such as react-pro-sidebar and nivo charts. Form validation is implemented using Yup and Formik."
-            }
+            title={t("TechForge_Dashboard")}
+            content={t("techforge_pargraph")}
             icon1={`/SkillsIcons/${
               themeMode === "light" ? "html" : "html_white"
             }.png`}
@@ -50,10 +60,8 @@ const Work = () => {
             gitHub={"https://github.com/SeyarSawayz/TechForgeDashboard.git"}
           />
           <WorkCardLeft
-            title={"Modern Bank App"}
-            content={
-              "Developed with React and Tailwind CSS, the Single Page Application (SPA) boasts a cutting-edge design, ensuring responsiveness across various devices. Embracing modern web development practices, the application offers a seamless user experience while harnessing the power of React's dynamic components and Tailwind CSS's utility-first approach to styling."
-            }
+            title={t("Modern_Bank_App")}
+            content={t("modern_bank_app_paragraph")}
             icon1={`/SkillsIcons/${
               themeMode === "light" ? "html" : "html_white"
             }.png`}
@@ -77,10 +85,8 @@ const Work = () => {
             gitHub={"https://github.com/SeyarSawayz/ModernBankApp.git"}
           />
           <WorkCardRight
-            title={"Netflix Landiga page UI Clone"}
-            content={
-              "The Netflix landing page UI, meticulously crafted using HTML and Tailwind CSS, exemplifies a harmonious blend of aesthetics and functionality. Tailored to adapt seamlessly to various devices, its responsive design ensures an optimal viewing experience across different screen sizes. xt"
-            }
+            title={t("Netflix_Landig_page_UI_Clone")}
+            content={t("Netflix_Landig_page_UI_Clone_desc")}
             icon1={`/SkillsIcons/${
               themeMode === "light" ? "html" : "html_white"
             }.png`}
@@ -103,19 +109,17 @@ const Work = () => {
           <button
             className={`bg-zinc-900 flex gap-2 items-center hover:bg-zinc-800 mt-4 text-lg text-white px-4 py-2 rounded-md font-bold dark:bg-[#535AC8] hover:dark:bg-[#3F72AF] dark:text-[#e0e0e0] ${
               more ? "hidden" : "block"
-            }`}
+            } ${farsi ? "font-Amiri text-xl" : ""}`}
             onClick={() => setMore((prev) => !prev)}
           >
-            See more{" "}
+            {t("see_more")}{" "}
             <img src="/icons/downWhite.png" className="slide-in-top" alt="" />
           </button>
           {more && (
             <div className="fade-in-top">
               <WorkCardLeft
-                title={"KayhanTech"}
-                content={
-                  "The website for Kayhan Tech's YouTube channel has been meticulously crafted using the versatile styling capabilities of Bootstrap. By leveraging Bootstrap's extensive framework, the website is not only aesthetically pleasing but also highly functional, with a layout that dynamically adjusts to different screen sizes and devices. "
-                }
+                title={t("KayhanTech")}
+                content={t("KayhanTech_desc")}
                 icon1={`/SkillsIcons/${
                   themeMode === "light" ? "html" : "html_white"
                 }.png`}
@@ -139,10 +143,8 @@ const Work = () => {
                 gitHub={"https://github.com/SeyarSawayz/MyWebsite.git"}
               />
               <WorkCardRight
-                title={"X UI Clone"}
-                content={
-                  "X (Twitter) Landing page clone has been meticulously crafted using Tailwind CSS. This clone ensures full responsiveness across a wide range of devices, guaranteeing an optimal viewing experience regardless of screen size or device type. "
-                }
+                title={t("X_UI_Clone")}
+                content={t("x_ui_clone_desc")}
                 icon1={`/SkillsIcons/${
                   themeMode === "light" ? "html" : "html_white"
                 }.png`}
@@ -163,10 +165,8 @@ const Work = () => {
                 gitHub={"https://github.com/SeyarSawayz/XClone.git"}
               />
               <WorkCardLeft
-                title={"DoDay Online Task Tracker"}
-                content={
-                  "Built with React and styled using Tailwind CSS, this task tracker offers seamless task management. With local storage integration, users can efficiently store and access their tasks, enhancing productivity."
-                }
+                title={t("DoDay_Online_Task_Tracker")}
+                content={t("DoDay_Online_Task_Tracker_desc")}
                 icon1={`/SkillsIcons/${
                   themeMode === "light" ? "html" : "html_white"
                 }.png`}

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useTranslationContext } from "../../context/TranslationProvider";
 
 const WorkCardRight = ({
   photo,
@@ -17,14 +18,23 @@ const WorkCardRight = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isGitHoverred, setisGitHoverred] = useState(false);
+  const { t, i18n, currentLanguage, farsi } = useTranslationContext();
 
   return (
     <div className="grid md:grid-cols-2 items-center justify-between mt-2 ml-8">
       <div className="order-1 flex items-center md:justify-start md:items-start justify-center flex-col">
-        <h1 className="font-bold text-xl mb-3 text-slate-600 dark:text-[#e0e0e0]">
+        <h1
+          className={`font-bold text-xl mb-3 text-slate-600 dark:text-[#e0e0e0] ${
+            farsi ? "font-Amiri" : ""
+          }`}
+        >
           {title}
         </h1>
-        <p className=" max-w-[350px] text-justify text-slate-600 dark:text-[#70d8bd]">
+        <p
+          className={`max-w-[350px] text-justify text-slate-600 dark:text-[#70d8bd] ${
+            farsi ? "font-Amiri" : ""
+          }`}
+        >
           {content}
         </p>
         <div className="flex flex-row items-center mt-4 gap-2">
@@ -70,11 +80,11 @@ const WorkCardRight = ({
             onMouseLeave={() => setIsHovered(false)}
             className={`bg-zinc-900 hover:bg-zinc-800 text-lg mt-10  text-white py-2 rounded-md cursor-pointer font-bold flex items-center justify-center gap-2 transition-all ease-in duration-200 dark:bg-[#535AC8] hover:dark:bg-[#3F72AF] dark:text-[#e0e0e0] ${
               isHovered ? "w-40" : "w-36"
-            }`}
+            } ${farsi ? "font-Amiri" : ""}`}
             href={webLink}
             target="_blank"
           >
-            View It Here {isHovered && <img src="/work/arrows.png" />}
+            {t("View_It_Here")} {isHovered && <img src="/work/arrows.png" />}
           </a>
 
           <a
@@ -82,11 +92,12 @@ const WorkCardRight = ({
             onMouseLeave={() => setisGitHoverred(false)}
             className={`bg-zinc-900 hover:bg-zinc-800 text-lg mt-10  text-white py-2 rounded-md cursor-pointer font-bold flex items-center justify-center gap-2 transition-all ease-in duration-200 dark:bg-[#535AC8] hover:dark:bg-[#3F72AF] dark:text-[#e0e0e0] ${
               isGitHoverred ? "w-52" : "w-48"
-            }`}
+            } ${farsi ? "font-Amiri" : ""}`}
             href={gitHub}
             target="_blank"
           >
-            View Github Repo {isGitHoverred && <img src="/work/arrows.png" />}
+            {t("View_Github_Repo")}{" "}
+            {isGitHoverred && <img src="/work/arrows.png" />}
           </a>
         </div>
       </div>

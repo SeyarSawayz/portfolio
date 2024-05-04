@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link as LinkScroll } from "react-scroll";
+import { useTranslationContext } from "../../context/TranslationProvider";
 
 const Footer = () => {
   const [showScroll, setShowScroll] = useState(false);
+  const { t, i18n, currentLanguage, farsi } = useTranslationContext();
 
   const scrollUp = () => {
     if (window.scrollY >= 560) {
@@ -19,9 +21,16 @@ const Footer = () => {
     };
   }, []);
   return (
-    <div className="border-t-2 border-gray-200 dark:border-slate-600 w-full flex flex-col items-center justify-center gap-4 py-4 md:mb-0 mb-20">
-      <h1 className="font-bold text-[30px] text-zinc-800 dark:text-[#e0e0e0]">
-        SEYAR
+    <div
+      className="border-t-2 border-gray-200 dark:border-slate-600 w-full flex flex-col items-center justify-center gap-4 py-4 md:mb-0 mb-20"
+      dir={`${farsi ? "rtl" : "ltr"}`}
+    >
+      <h1
+        className={`font-bold text-[30px] text-zinc-800 dark:text-[#e0e0e0] ${
+          farsi ? "font-Amiri" : ""
+        }`}
+      >
+        {t("SEYAR")}
       </h1>
       <div className="">
         <ul className="flex items-center justify-center gap-10 ">
@@ -33,7 +42,9 @@ const Footer = () => {
             offset={-150}
             duration={100}
           >
-            <li className="font-semibold mt-1">Home</li>
+            <li className={`font-semibold mt-1 ${farsi ? "font-Amiri" : ""}`}>
+              {t("HOME")}
+            </li>
           </LinkScroll>
           <LinkScroll
             to="about"
@@ -43,7 +54,9 @@ const Footer = () => {
             offset={-100}
             duration={100}
           >
-            <li className="font-semibold mt-1">About</li>
+            <li className={`font-semibold mt-1 ${farsi ? "font-Amiri" : ""}`}>
+              {t("ABOUT ME")}
+            </li>
           </LinkScroll>
           <LinkScroll
             to="skills"
@@ -53,7 +66,9 @@ const Footer = () => {
             offset={-100}
             duration={100}
           >
-            <li className="font-semibold mt-1">Skills</li>
+            <li className={`font-semibold mt-1 ${farsi ? "font-Amiri" : ""}`}>
+              {t("SKILLS")}
+            </li>
           </LinkScroll>
         </ul>
       </div>
@@ -83,11 +98,17 @@ const Footer = () => {
         </a>
       </div>
       <div className="mt-5 flex flex-col items-center justify-center mb-4">
-        <p className="text-lg dark:text-[#e0e0e0]">
-          &copy; 2024 Seyar Sawayz. All rights reserved.
+        <p
+          className={`text-lg dark:text-[#e0e0e0] ${farsi ? "font-Amiri" : ""}`}
+        >
+          &copy;{t("copyright")}
         </p>
-        <p className="text-sm mt-2 dark:text-[#e0e0e0]">
-          Powered by{" "}
+        <p
+          className={`text-sm mt-2 dark:text-[#e0e0e0] ${
+            farsi ? "font-Amiri" : ""
+          }`}
+        >
+          {t("Powered_by")}{" "}
           <a
             href="https://kayhantech.netlify.app/"
             target="_blank"

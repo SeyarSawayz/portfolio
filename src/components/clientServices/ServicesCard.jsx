@@ -1,10 +1,16 @@
 import useTheme from "../../context/theme";
+import { useTranslationContext } from "../../context/TranslationProvider";
 
 const ServicesCard = ({ content }) => {
+  const { t, i18n, currentLanguage, farsi } = useTranslationContext();
+
   const { themeMode, lightTheme, darkTheme } = useTheme();
 
   return (
-    <div className="flex flex-row items-center justify-start gap-2 min-w-[400px] md:min-w-[550px] ">
+    <div
+      className="flex flex-row items-center justify-start gap-2 min-w-[400px] md:min-w-[550px] "
+      dir={`${farsi ? "rtl" : "ltr"}`}
+    >
       <img
         src={`/icons/${
           themeMode === "light" ? "checkmark" : "checkmark_white"
