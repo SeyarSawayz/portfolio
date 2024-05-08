@@ -47,7 +47,7 @@ const ContactMe = () => {
 
           <Talk
             platform={t("WhatsApp")}
-            target={"+91 974044 73043"}
+            target={`${farsi ? "919704473043+" : "+91 974044 73043"}`}
             icon={`/icons/${
               themeMode === "light" ? "whatsapp" : "whatsapp_white"
             }.png`}
