@@ -35,6 +35,16 @@ const Social = () => {
           className="hover:scale-110 hover:transition-all hover:duration-300"
         />
       </a>
+
+      <a href="https://www.facebook.com/KAYHANTECHNOLOGY/" target="_blank">
+        <img
+          src={`/icons/${
+            themeMode === "light" ? "facebook" : "facebook_white"
+          }.png`}
+          alt="facebook"
+          className="hover:scale-110 hover:transition-all hover:duration-300"
+        />
+      </a>
       <a href="https://www.youtube.com/c/kayhantech" target="_blank">
         <img
           src={`/icons/${

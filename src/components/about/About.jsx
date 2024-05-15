@@ -3,9 +3,12 @@ import useTheme from "../../context/theme";
 import cv from "../../../src/assets/seyar.pdf";
 import { useTranslationContext } from "../../context/TranslationProvider";
 
+
 const About = () => {
   const { themeMode, lightTheme, darkTheme } = useTheme();
   const { t, i18n, currentLanguage, farsi } = useTranslationContext();
+
+
 
   return (
     <section

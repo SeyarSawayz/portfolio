@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SkillsCard from "./SkillsCard";
 import useTheme from "../../context/theme";
 import { useTranslationContext } from "../../context/TranslationProvider";
@@ -9,7 +9,7 @@ const Skills = () => {
 
   return (
     <section
-      className="flex flex-col items-center justify-between gap-1 mt-[105px]"
+      className=" skills flex flex-col items-center justify-between gap-1 mt-[80px]"
       id="skills"
     >
       <h1

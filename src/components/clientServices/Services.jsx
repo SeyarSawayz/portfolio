@@ -24,9 +24,9 @@ const Services = () => {
       >
         {t("What_i_offer")}
       </p>
-      <div className="md:min-w-[500px] min-w-[150px] min-h-[400px] border dark:border-slate-600 border-gray-400 rounded-3xl  p-4 flex flex-col items-center  mt-4 shadow-2xl gap-3">
+      <div className="md:min-w-[500px] md:w-[600px] w-[400px] min-h-[400px] border dark:border-slate-600 border-gray-400 rounded-3xl p-0  md:p-4 flex flex-col items-center  mt-4 shadow-2xl gap-3 ">
         <h1
-          className={`font-bold text-xl mb-3 text-slate-600 dark:text-[#e0e0e0]  ${
+          className={`font-bold text-xl my-3 text-slate-600 dark:text-[#e0e0e0]  ${
             farsi ? "font-Amiri" : ""
           }`}
         >

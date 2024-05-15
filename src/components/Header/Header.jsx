@@ -5,6 +5,8 @@ import ThemeBtn from "../themeBtn/ThemeBtn";
 import useTheme from "../../context/theme";
 import Languages from "./Languages";
 import { useTranslationContext } from "../../context/TranslationProvider";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Header = ({ activeNav, setActiveNav }) => {
   const menu = getMenu();
@@ -13,6 +15,18 @@ const Header = ({ activeNav, setActiveNav }) => {
   const { themeMode, lightTheme, darkTheme } = useTheme();
 
   const [toggle, setToggle] = useState(false);
+
+  //Animation using GSAP
+
+  const t1 = gsap.timeline();
+  useGSAP(() => {
+    t1.from(".logo, .navbar, .langmode", {
+      y: -200,
+      duration: 1,
+      opacity: 0,
+      stagger: 0.3,
+    });
+  });
   return (
     <div
       className={`md:sticky top-0  bg-white dark:bg-[#1F2A40] z-50 `}
@@ -27,7 +41,7 @@ const Header = ({ activeNav, setActiveNav }) => {
         </div>
       </div>
       <nav className="p-4 px-36  md:flex hidden  md:items-center md:justify-between   ">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center logo">
           <LinkScroll
             to="home"
             className="flex gap-3 items-center cursor-pointer"
@@ -53,7 +67,7 @@ const Header = ({ activeNav, setActiveNav }) => {
             </h1>
           </LinkScroll>
         </div>
-        <ul className="flex  items-center justify-center gap-8 ">
+        <ul className="flex navbar  items-center justify-center gap-8 ">
           {menu.map((menuItem, index) => (
             <LinkScroll
               spy={true}
@@ -73,11 +87,11 @@ const Header = ({ activeNav, setActiveNav }) => {
             </LinkScroll>
           ))}
         </ul>
-        <div className="flex items-center justify-between gap-4">
-          <div>
+        <div className="flex  items-center justify-between gap-4">
+          <div className="langmode">
             <Languages />
           </div>
-          <div>
+          <div className="langmode">
             <ThemeBtn />
           </div>
         </div>

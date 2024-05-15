@@ -4,11 +4,30 @@ import Data from "./Data";
 import { Link as LinkScroll } from "react-scroll";
 import useTheme from "../../context/theme";
 import { useTranslationContext } from "../../context/TranslationProvider";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Home = ({ activeNav, setActiveNav }) => {
   const { themeMode, lightTheme, darkTheme } = useTheme();
   const { t, i18n, currentLanguage, farsi } = useTranslationContext();
 
+  const t1 = gsap.timeline();
+  useGSAP(() => {
+    t1.from("#home", {
+      y: -200,
+      duration: 1,
+      opacity: 0,
+      stagger: 0.3,
+      delay: 1,
+    });
+    t1.from(".scroll", {
+      y: 500,
+      duration: 1.5,
+      opacity: 0,
+      stagger: 0.3,
+      delay: 1,
+    });
+  });
   return (
     <section
       id="home"
@@ -27,7 +46,7 @@ const Home = ({ activeNav, setActiveNav }) => {
         </div>
         <div className="image md:order-3 order-1 md:mx-auto  w-[250px] h-[250px] md:col-span-5 col-span-10 shadow-2xl profileImg" />
       </div>
-      <div className="md:ml-36 md:mt-20 ml-1 mt-5  items-center gap-3  cursor-pointer md:flex hidden">
+      <div className="scroll md:ml-36 md:mt-20 ml-1 mt-5  items-center gap-3  cursor-pointer md:flex hidden">
         <LinkScroll
           to="about"
           className="flex"
@@ -43,7 +62,7 @@ const Home = ({ activeNav, setActiveNav }) => {
             alt=""
           />
           <h1
-            className={`font-bold text-gray-600 mx-2 dark:text-[#e0e0e0] ${
+            className={` font-bold text-gray-600 mx-2 dark:text-[#e0e0e0] ${
               farsi ? "font-Amiri text-xl mx-3" : ""
             }`}
           >

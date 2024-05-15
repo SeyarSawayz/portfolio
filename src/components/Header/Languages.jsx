@@ -64,7 +64,7 @@ const Languages = () => {
       {isOpen && (
         <div
           className={`bg-white absolute w-[200px] top-16  ${
-            farsi ? "md:left-48" : "md:right-48"
+            farsi ? "md:left-10" : "md:right-10"
           } flex flex-col items-start rounded-lg p-4 border border-gray-600 fade-in-top z-[999]`}
         >
           {languages.map((item, i) => (
