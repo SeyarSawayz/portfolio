@@ -53,6 +53,7 @@
   "x_ui_clone_desc": "X (Twitter) Landing page clone has been meticulously crafted using Tailwind CSS. This clone ensures full responsiveness across a wide range of devices, guaranteeing an optimal viewing experience regardless of screen size or device type.",
   "DoDay_Online_Task_Tracker": "DoDay Online Task Tracker",
   "DoDay_Online_Task_Tracker_desc": "Built with React and styled using Tailwind CSS, this task tracker offers seamless task management. With local storage integration, users can efficiently store and access their tasks, enhancing productivity.",
+
   "Get_in_touch": "Get in touch",
   "Contact_Me": "Contact Me",
   "Talk_to_me": "Talk to me",
@@ -65,5 +66,7 @@
   "Project_details": "Project Details",
   "Send_Message": "Send Message",
   "copyright": "2024 Seyar Sawayz. All rights reserved.",
-  "Powered_by": "Powered by"
+  "Powered_by": "Powered by",
+  "MovieFlex": "MovieFlex",
+  "movieFlix_pargraph": "I developed a dynamic movie collections web application using React, styled with Tailwind CSS, and managed state with Redux. The application integrates with the TMDb API to fetch movie data, allowing users to view movie details, ratings, and trailers. Features include dynamic banners with transition effects, a responsive design for optimal viewing on all devices, and reusable components for maintainability. "
 }

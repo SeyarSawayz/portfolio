@@ -35,8 +35,8 @@ const Work = () => {
         </p>
         <div className="w-full min-h-[400px] border dark:border-slate-600 border-gray-400 rounded-3xl  p-4 flex flex-col items-center  mt-4 shadow-2xl gap-3 overflow-hidden">
           <WorkCardRight
-            title={t("TechForge_Dashboard")}
-            content={t("techforge_pargraph")}
+            title={t("MovieFlex")}
+            content={t("movieFlix_pargraph")}
             icon1={`/SkillsIcons/${
               themeMode === "light" ? "html" : "html_white"
             }.png`}
@@ -55,9 +55,9 @@ const Work = () => {
             icon6={`/SkillsIcons/${
               themeMode === "light" ? "netlify" : "netlify_white"
             }.png`}
-            photo={"/work/TechForge.png"}
-            webLink={"https://techforgedashboard.netlify.app/"}
-            gitHub={"https://github.com/SeyarSawayz/TechForgeDashboard.git"}
+            photo={"/work/Movieflix.png"}
+            webLink={"https://movieflexjoy.netlify.app/"}
+            gitHub={"https://github.com/SeyarSawayz/MovieFlix.git"}
           />
           <WorkCardLeft
             title={t("Modern_Bank_App")}
@@ -188,6 +188,31 @@ const Work = () => {
                 photo={"/work/doday.png"}
                 webLink={"https://dodaytasktracker.netlify.app/"}
                 gitHub={"https://github.com/SeyarSawayz/DoDayTaskTracker.git"}
+              />
+              <WorkCardRight
+                title={t("TechForge_Dashboard")}
+                content={t("techforge_pargraph")}
+                icon1={`/SkillsIcons/${
+                  themeMode === "light" ? "html" : "html_white"
+                }.png`}
+                icon2={`/SkillsIcons/${
+                  themeMode === "light" ? "css" : "css_white"
+                }.png`}
+                icon3={`/SkillsIcons/${
+                  themeMode === "light" ? "js" : "js_white"
+                }.png`}
+                icon4={`/SkillsIcons/${
+                  themeMode === "light" ? "tailwind" : "tailwind_white"
+                }.png`}
+                icon5={`/SkillsIcons/${
+                  themeMode === "light" ? "react" : "react_white"
+                }.png`}
+                icon6={`/SkillsIcons/${
+                  themeMode === "light" ? "netlify" : "netlify_white"
+                }.png`}
+                photo={"/work/TechForge.png"}
+                webLink={"https://techforgedashboard.netlify.app/"}
+                gitHub={"https://github.com/SeyarSawayz/TechForgeDashboard.git"}
               />
             </div>
           )}
