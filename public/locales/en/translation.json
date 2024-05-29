@@ -68,5 +68,6 @@
   "copyright": "2024 Seyar Sawayz. All rights reserved.",
   "Powered_by": "Powered by",
   "MovieFlex": "MovieFlex",
-  "movieFlix_pargraph": "I developed a dynamic movie collections web application using React, styled with Tailwind CSS, and managed state with Redux. The application integrates with the TMDb API to fetch movie data, allowing users to view movie details, ratings, and trailers. Features include dynamic banners with transition effects, a responsive design for optimal viewing on all devices, and reusable components for maintainability. "
+  "movieFlix_pargraph": "I developed a dynamic movie collections web application using React, styled with Tailwind CSS, and managed state with Redux. The application integrates with the TMDb API to fetch movie data, allowing users to view movie details, ratings, and trailers. Features include dynamic banners with transition effects, a responsive design for optimal viewing on all devices, and reusable components for maintainability. ",
+  "Email_sent_successfully": "Email sent successfully"
 }

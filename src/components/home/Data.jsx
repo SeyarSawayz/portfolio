@@ -44,8 +44,8 @@ const Data = () => {
       </h1>
       <div className="relative">
         <h1
-          className={` frontend text-gray-800 dark:text-[#70d8bd] before:block before:absolute before:w-[70px] before:h-[2px] before:bg-black md:before:top-[66%] ${
-            farsi ? "md:before:left-0 before:left-0" : "md:before:left-50"
+          className={` frontend text-gray-800 dark:text-[#70d8bd] before:block before:absolute before:w-[70px] before:h-[2px] before:bg-black lg:before:top-[66%] ${
+            farsi ? "lg:before:left-0 before:left-0" : "lg:before:left-50"
           } before:top-[50%] before:dark:bg-[#e0e0e0]`}
         >
           <span
@@ -58,7 +58,7 @@ const Data = () => {
         </h1>
       </div>
       <p
-        className={`frontend text-gray-500 dark:text-[#70d8bd] text-justify text-focus-in ${
+        className={`frontend text-gray-800 dark:text-[#70d8bd] text-justify text-focus-in ${
           farsi ? "rtl font-Vazirmatn" : ""
         }`}
       >

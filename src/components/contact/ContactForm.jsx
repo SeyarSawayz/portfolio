@@ -12,14 +12,15 @@ const contactSchema = Yup.object().shape({
 });
 
 const ContactForm = (e) => {
+  const { t, i18n, currentLanguage, farsi } = useTranslationContext();
+
   const form = useRef();
   const sendEmail = () => {
     emailjs.sendForm("service_03ybwbe", "template_r0i9ur8", form.current, {
       publicKey: "WPFc5LLprJScZjWkm",
     });
-    toast.success("Email sent successfully");
+    toast.success(t("Email_sent_successfully"));
   };
-  const { t, i18n, currentLanguage, farsi } = useTranslationContext();
 
   return (
     <div className="w-full">

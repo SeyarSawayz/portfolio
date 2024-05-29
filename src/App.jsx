@@ -12,10 +12,11 @@ import Footer from "./components/footer/Footer";
 import { useState } from "react";
 import { ThemeProvider } from "./context/theme";
 import { TranslationProvider } from "./context/TranslationProvider";
+import { Element } from "react-scroll";
 
 const App = () => {
   const [dark, setDark] = useState(true);
-  const [themeMode, setThemeMode] = useState("dark");
+  const [themeMode, setThemeMode] = useState("light");
   const [activeNav, setActiveNav] = useState("home");
 
   const darkTheme = () => {
@@ -43,11 +44,13 @@ const App = () => {
         <div className="relative container mx-auto md:px-48 px-4 py-10 ">
           <main>
             <Home activeNav={activeNav} setActiveNav={setActiveNav} />
-            <About />
-            <Skills />
-            <Services />
-            <Work />
-            <ContactMe />
+            <Element>
+              <About />
+              <Skills />
+              <Services />
+              <Work />
+              <ContactMe />
+            </Element>
           </main>
         </div>
         <Footer />

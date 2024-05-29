@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import SkillsCard from "./SkillsCard";
 import useTheme from "../../context/theme";
 import { useTranslationContext } from "../../context/TranslationProvider";
+import { Element } from "react-scroll";
 
 const Skills = () => {
   const { themeMode, lightTheme, darkTheme } = useTheme();
@@ -14,7 +15,7 @@ const Skills = () => {
     >
       <h1
         className={`font-bold text-[30px] text-zinc-800 dark:text-[#e0e0e0] ${
-          farsi ? "font-Amiri md:text-2xl mx-3" : ""
+          farsi ? "font-Amiri lg:text-2xl mx-3" : ""
         }`}
       >
         {t("SKILLS")}
@@ -26,7 +27,7 @@ const Skills = () => {
       >
         {t("My_technical_level")}
       </p>
-      <div className="grid md:grid-cols-2 items-center justify-center gap-3 ">
+      <div className="grid lg:grid-cols-2 items-center justify-center gap-3 ">
         <div className="min-w-[400px] h-[400px] border border-gray-400 dark:border-slate-600 rounded-3xl  p-4 flex flex-col items-center mt-4 shadow-2xl gap-3">
           <h1
             className={`font-bold text-xl mb-3 text-slate-600 dark:text-[#e0e0e0] ${

@@ -15,13 +15,13 @@ const Work = () => {
   return (
     <>
       <section
-        className="flex flex-col items-center justify-between w-full gap-1 mt-[170px] slide-top"
+        className="flex flex-col items-center justify-between  w-full gap-1 mt-[170px] slide-top"
         id="work"
         dir={`${farsi ? "rtl" : "ltr"}`}
       >
         <h1
           className={`font-bold text-[30px] text-zinc-800 dark:text-[#e0e0e0] ${
-            farsi ? "font-Amiri md:text-3xl" : ""
+            farsi ? "font-Amiri lg:text-3xl" : ""
           }`}
         >
           {t("PROJECTS")}

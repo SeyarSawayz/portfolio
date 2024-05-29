@@ -20,11 +20,11 @@ const WorkCardLeft = ({
   const { t, i18n, currentLanguage, farsi } = useTranslationContext();
 
   return (
-    <div className="grid md:grid-cols-2 items-center justify-between my-10">
-      <div className="md:hover:scale-105  duration-300 ease-in-out cursor-pointer">
+    <div className="grid lg:grid-cols-2 items-center justify-between my-10">
+      <div className="lg:hover:scale-105  duration-300 ease-in-out cursor-pointer">
         <img src={photo} alt="" />
       </div>
-      <div className="flex items-center md:justify-start md:items-start justify-center flex-col">
+      <div className="flex items-center lg:justify-start lg:items-start justify-center flex-col">
         <h1
           className={`font-bold text-xl mb-3 text-slate-600 dark:text-[#e0e0e0] ${
             farsi ? " font-Amiri" : ""
@@ -33,7 +33,7 @@ const WorkCardLeft = ({
           {title}
         </h1>
         <p
-          className={`max-w-[350px] text-justify text-slate-600 md:px-0 px-4 dark:text-[#70d8bd] ${
+          className={`max-w-[350px] text-justify text-slate-600 lg:px-0 px-4 dark:text-[#70d8bd] ${
             farsi ? "font-Amiri" : ""
           }`}
         >

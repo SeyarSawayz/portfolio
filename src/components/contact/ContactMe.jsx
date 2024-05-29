@@ -28,7 +28,7 @@ const ContactMe = () => {
           {t("Contact_Me")}
         </p>
       )}
-      <div className="w-full grid md:grid-cols-2 items-center justify-center    gap-3 ">
+      <div className="w-full grid lg:grid-cols-2 items-center justify-center    gap-3 ">
         <div className="flex flex-col items-center justify-center gap-3  min-h-[500px] ">
           <h1
             className={`font-semibold text-lg text-zinc-800 dark:text-[#e0e0e0] ${
@@ -61,7 +61,7 @@ const ContactMe = () => {
             }.png`}
           />
         </div>
-        <div className="flex flex-col items-center justify-center gap-3 md:mt-9 min-h-[500px]">
+        <div className="flex flex-col items-center justify-center gap-3 lg:mt-9 min-h-[500px]">
           <h1
             className={`font-semibold text-lg text-center text-zinc-800 dark:text-[#e0e0e0] ${
               farsi ? "font-Amiri text-xl" : ""

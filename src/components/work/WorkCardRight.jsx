@@ -21,8 +21,8 @@ const WorkCardRight = ({
   const { t, i18n, currentLanguage, farsi } = useTranslationContext();
 
   return (
-    <div className="grid md:grid-cols-2 items-center justify-between mt-2 ml-8">
-      <div className="order-1 flex items-center md:justify-start md:items-start justify-center flex-col ">
+    <div className="grid lg:grid-cols-2 items-center justify-between mt-2 ml-8 w-full">
+      <div className="order-1 flex items-center lg:justify-start lg:items-start justify-center flex-col ">
         <h1
           className={`font-bold text-xl mb-3 text-slate-600 dark:text-[#e0e0e0] ${
             farsi ? "font-Amiri" : ""
@@ -31,7 +31,7 @@ const WorkCardRight = ({
           {title}
         </h1>
         <p
-          className={`max-w-[350px] md:mr-0 mr-8 inline-block text-justify text-slate-600 dark:text-[#70d8bd] ${
+          className={`max-w-[350px] lg:mr-0 mr-8 inline-block text-justify text-slate-600 dark:text-[#70d8bd] ${
             farsi ? "font-Amiri" : ""
           }`}
         >
@@ -74,7 +74,7 @@ const WorkCardRight = ({
             className="hover:scale-110 hover:transition-all hover:duration-300 cursor-pointer"
           />
         </div>
-        <div className="flex items-center gap-2 md:mr-0 mr-6">
+        <div className="flex items-center gap-2 lg:mr-0 mr-6">
           <a
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -101,7 +101,7 @@ const WorkCardRight = ({
           </a>
         </div>
       </div>
-      <div className="md:order-1  bg-transparent mb-2 md:mb-0 md:hover:scale-105  duration-200 ease-in-out cursor-pointer">
+      <div className="lg:order-1  bg-transparent mb-2 lg:mb-0 lg:hover:scale-105  duration-200 ease-in-out cursor-pointer">
         <img src={photo} alt="" />
       </div>
     </div>

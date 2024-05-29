@@ -35,18 +35,18 @@ const Home = ({ activeNav, setActiveNav }) => {
       dir={`${farsi ? "rtl" : "ltr"}`}
     >
       <div
-        className={`grid md:grid-cols-12 grid-cols-12 items-center w-full  gap-4 
+        className={`grid lg:grid-cols-12 grid-cols-12 items-center w-full  gap-4 
         }`}
       >
-        <div className="social md:py-20 py-10 ml-0 md:col-span-2  col-span-2">
+        <div className="social lg:py-20 py-10 ml-0 lg:col-span-2  col-span-2">
           <Social />
         </div>
-        <div className="data order-3 md:ml-0 md:col-span-5  col-span-12 ">
+        <div className="data order-3 lg:ml-0 lg:col-span-5  col-span-12 ">
           <Data />
         </div>
-        <div className="image md:order-3 order-1 md:mx-auto  w-[250px] h-[250px] md:col-span-5 col-span-10 shadow-2xl profileImg" />
+        <div className="image lg:order-3 order-1 lg:mx-auto  w-[250px] h-[250px] lg:col-span-5 col-span-10 shadow-2xl profileImg" />
       </div>
-      <div className="scroll md:ml-36 md:mt-20 ml-1 mt-5  items-center gap-3  cursor-pointer md:flex hidden">
+      <div className="scroll lg:ml-36 lg:mt-20 ml-1 mt-5  items-center gap-3  cursor-pointer lg:flex hidden">
         <LinkScroll
           to="about"
           className="flex"
