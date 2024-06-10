@@ -22,7 +22,7 @@ const WorkCardRight = ({
 
   return (
     <div className="grid lg:grid-cols-2 items-center justify-between mt-2 ml-8 w-full">
-      <div className="order-1 flex items-center lg:justify-start lg:items-start justify-center flex-col ">
+      <div className="order-1 flex items-center lg:justify-start lg:items-center justify-center flex-col">
         <h1
           className={`font-bold text-xl mb-3 text-slate-600 dark:text-[#e0e0e0] ${
             farsi ? "font-Amiri" : ""

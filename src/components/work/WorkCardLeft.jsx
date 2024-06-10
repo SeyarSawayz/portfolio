@@ -24,7 +24,7 @@ const WorkCardLeft = ({
       <div className="lg:hover:scale-105  duration-300 ease-in-out cursor-pointer">
         <img src={photo} alt="" />
       </div>
-      <div className="flex items-center lg:justify-start lg:items-start justify-center flex-col">
+      <div className="flex items-center lg:justify-start lg:items-center justify-center flex-col">
         <h1
           className={`font-bold text-xl mb-3 text-slate-600 dark:text-[#e0e0e0] ${
             farsi ? " font-Amiri" : ""

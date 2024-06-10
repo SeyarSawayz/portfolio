@@ -60,8 +60,8 @@ const Work = () => {
             gitHub={"https://github.com/SeyarSawayz/MovieFlix.git"}
           />
           <WorkCardLeft
-            title={t("Modern_Bank_App")}
-            content={t("modern_bank_app_paragraph")}
+            title={t("kayhantech_blog")}
+            content={t("kayhantech_blog_paragraph")}
             icon1={`/SkillsIcons/${
               themeMode === "light" ? "html" : "html_white"
             }.png`}
@@ -80,9 +80,9 @@ const Work = () => {
             icon6={`/SkillsIcons/${
               themeMode === "light" ? "netlify" : "netlify_white"
             }.png`}
-            photo={"/work/bankapp.png"}
-            webLink={"https://bankfolio.netlify.app/"}
-            gitHub={"https://github.com/SeyarSawayz/ModernBankApp.git"}
+            photo={"/work/kayhantechblog.png"}
+            webLink={"https://kayhantechblog.netlify.app"}
+            gitHub={"https://github.com/SeyarSawayz/KayhanTechBlog.git"}
           />
           <WorkCardRight
             title={t("Netflix_Landig_page_UI_Clone")}
@@ -213,6 +213,31 @@ const Work = () => {
                 photo={"/work/TechForge.png"}
                 webLink={"https://techforgedashboard.netlify.app/"}
                 gitHub={"https://github.com/SeyarSawayz/TechForgeDashboard.git"}
+              />
+              <WorkCardLeft
+                title={t("Modern_Bank_App")}
+                content={t("modern_bank_app_paragraph")}
+                icon1={`/SkillsIcons/${
+                  themeMode === "light" ? "html" : "html_white"
+                }.png`}
+                icon2={`/SkillsIcons/${
+                  themeMode === "light" ? "css" : "css_white"
+                }.png`}
+                icon3={`/SkillsIcons/${
+                  themeMode === "light" ? "js" : "js_white"
+                }.png`}
+                icon4={`/SkillsIcons/${
+                  themeMode === "light" ? "tailwind" : "tailwind_white"
+                }.png`}
+                icon5={`/SkillsIcons/${
+                  themeMode === "light" ? "react" : "react_white"
+                }.png`}
+                icon6={`/SkillsIcons/${
+                  themeMode === "light" ? "netlify" : "netlify_white"
+                }.png`}
+                photo={"/work/bankapp.png"}
+                webLink={"https://bankfolio.netlify.app/"}
+                gitHub={"https://github.com/SeyarSawayz/ModernBankApp.git"}
               />
             </div>
           )}
