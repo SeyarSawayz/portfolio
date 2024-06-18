@@ -13,10 +13,7 @@ const Social = () => {
           className="hover:scale-110 hover:transition-all hover:duration-300"
         />
       </a>
-      <a
-        href="https://www.linkedin.com/in/seyar-sawayz-159119119/"
-        target="_blank"
-      >
+      <a href="https://www.linkedin.com/in/seyarsawayz/" target="_blank">
         <img
           src={`/icons/${
             themeMode === "light" ? "linkedin" : "linkedin_white"
