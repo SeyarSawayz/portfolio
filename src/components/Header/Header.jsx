@@ -37,7 +37,7 @@ const Header = ({ activeNav, setActiveNav }) => {
         <div className="ml-10">
           <Languages />
         </div>
-        <div className={`${farsi ? "ml-10" : "ml-0 mr-10"}`}>
+        <div className={`${farsi ? "ml-16" : "ml-0 mr-10"}`}>
           <ThemeBtn />
         </div>
       </div>

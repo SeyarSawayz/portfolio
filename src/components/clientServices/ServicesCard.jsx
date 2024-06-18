@@ -8,7 +8,7 @@ const ServicesCard = ({ content }) => {
 
   return (
     <div
-      className="flex flex-row items-center justify-start gap-2 min-w-[400px] md:min-w-[550px] "
+      className="flex flex-row items-center justify-start gap-2 min-w-[400px] md:min-w-[550px] pr-8 lg:pr-0 "
       dir={`${farsi ? "rtl" : "ltr"}`}
     >
       <img

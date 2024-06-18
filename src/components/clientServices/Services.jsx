@@ -42,7 +42,7 @@ const Services = () => {
           </p>
         </div>
         <div
-          className=" p-4 flex flex-col self-start items-center justify-start gap-3"
+          className=" p-4 flex flex-col self-start items-center justify-start gap-3 "
           dir={`${farsi ? "rtl" : "ltr"}`}
         >
           <ServicesCard content={t("service_1")} />

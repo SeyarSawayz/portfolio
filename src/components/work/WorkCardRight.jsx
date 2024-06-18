@@ -21,8 +21,8 @@ const WorkCardRight = ({
   const { t, i18n, currentLanguage, farsi } = useTranslationContext();
 
   return (
-    <div className="grid lg:grid-cols-2 items-center justify-between mt-2 ml-8 w-full">
-      <div className="order-1 flex items-center lg:justify-start lg:items-start justify-center flex-col">
+    <div className="grid lg:grid-cols-2 items-center justify-between">
+      <div className="order-1  lg:mr-5 lg:ml-5  flex items-center lg:justify-start lg:items-start justify-center flex-col">
         <h1
           className={`font-bold text-xl mb-3 text-slate-600 dark:text-[#e0e0e0] ${
             farsi ? "font-Amiri" : ""
@@ -31,7 +31,7 @@ const WorkCardRight = ({
           {title}
         </h1>
         <p
-          className={`max-w-[350px] lg:mr-0 mr-8 inline-block text-justify text-slate-600 dark:text-[#70d8bd] ${
+          className={`max-w-[350px] text-justify text-slate-600 lg:px-0 px-4 dark:text-[#70d8bd] ${
             farsi ? "font-Amiri" : ""
           }`}
         >
@@ -74,11 +74,11 @@ const WorkCardRight = ({
             className="hover:scale-110 hover:transition-all hover:duration-300 cursor-pointer"
           />
         </div>
-        <div className="flex items-center gap-2 lg:mr-0 mr-6">
+        <div className="flex items-center gap-2 ">
           <a
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className={`bg-zinc-900 hover:bg-zinc-800 text-lg mt-10  text-white py-2 rounded-md cursor-pointer font-bold flex items-center justify-center gap-2 transition-all ease-in duration-200 dark:bg-[#535AC8] hover:dark:bg-[#3F72AF] dark:text-[#e0e0e0] ${
+            className={`bg-zinc-900  hover:bg-zinc-800 text-lg mt-10  text-white py-2 rounded-md cursor-pointer font-bold flex items-center justify-center gap-2 transition-all ease-in duration-200 dark:bg-[#535AC8] hover:dark:bg-[#3F72AF] dark:text-[#e0e0e0] ${
               isHovered ? "w-40" : "w-36"
             } ${farsi ? "font-Amiri" : ""}`}
             href={webLink}

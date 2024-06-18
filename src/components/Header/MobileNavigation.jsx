@@ -17,7 +17,7 @@ const MobileNavigation = () => {
             <ul className="flex items-center justify-center gap-x-20 mb-4 dark:bg-inherit bg-white">
               <LinkScroll
                 to="home"
-                className="flex flex-col items-center cursor-pointer"
+                className="flex text-center  flex-col items-center cursor-pointer"
                 spy={true}
                 smooth={true}
                 offset={-150}
@@ -36,7 +36,7 @@ const MobileNavigation = () => {
               </LinkScroll>
               <LinkScroll
                 to="about"
-                className="flex flex-col items-center cursor-pointer dark:text-[#e0e0e0]"
+                className="flex text-center flex-col items-center cursor-pointer dark:text-[#e0e0e0]"
                 spy={true}
                 smooth={true}
                 offset={-100}
@@ -53,7 +53,7 @@ const MobileNavigation = () => {
               </LinkScroll>
               <LinkScroll
                 to="skills"
-                className="flex flex-col items-center cursor-pointer dark:text-[#e0e0e0]"
+                className="flex text-center  flex-col items-center cursor-pointer dark:text-[#e0e0e0]"
                 spy={true}
                 smooth={true}
                 offset={-100}
